@@ -1,3 +1,12 @@
+/**
+ * @copyright (c) 2018 Arthur Schiwon <blizzz@arthur-schiwon.de>
+ *
+ * @author Arthur Schiwon <blizzz@arthur-schiwon.de>
+ *
+ * This file is licensed under the Affero General Public License version 3 or
+ * later. See the COPYING file.
+ */
+
 (function(OCP) {
 	"use strict";
 

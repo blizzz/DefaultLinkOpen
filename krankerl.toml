@@ -1,0 +1,9 @@
+[package]
+exclude = [
+    ".git",
+    "krankerl.toml"
+]
+
+before_cmds = [
+
+]

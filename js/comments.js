@@ -17,7 +17,7 @@
 				return content.replace(this.urlRegex, function(url) {
 					var hasProtocol = (url.indexOf('https://') !== -1) || (url.indexOf('http://') !== -1);
 					if(!hasProtocol) {
-						url = 'https://' + url;
+						url = 'https://' + url.trim();
 					}
 
 					var linkText = url.replace(self.protocolRegex, '');

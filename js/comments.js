@@ -15,7 +15,7 @@
 			OCP.Comments._originalFormatLinksRich = OCP.Comments.formatLinksRich;
 			OCP.Comments.formatLinksRich = function(content) {
 				let formattedContent = OCP.Comments._originalFormatLinksRich(content);
-				return formattedContent.replace('<a class="external" target="_blank" rel="noopener noreferrer"', '<a class="external" rel="noopener noreferrer"');
+				return formattedContent.replace(/<a class="external" target="_blank" rel="noopener noreferrer"/g, '<a class="external" rel="noopener noreferrer"');
 			}
 		}
 	};

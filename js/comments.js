@@ -12,17 +12,10 @@
 
 	OCP.DefaultLinkOpen = {
 		apply: function () {
+			OCP.Comments._originalFormatLinksRich = OCP.Comments.formatLinksRich;
 			OCP.Comments.formatLinksRich = function(content) {
-				var self = this;
-				return content.replace(this.urlRegex, function(url) {
-					var hasProtocol = (url.indexOf('https://') !== -1) || (url.indexOf('http://') !== -1);
-					if(!hasProtocol) {
-						url = 'https://' + url.trim();
-					}
-
-					var linkText = url.replace(self.protocolRegex, '');
-					return '<a class="external" href="' + url + '">' + linkText + '</a>';
-				});
+				let formattedContent = OCP.Comments._originalFormatLinksRich(content);
+				return formattedContent.replace('<a class="external" target="_blank" rel="noopener noreferrer"', '<a class="external" rel="noopener noreferrer"');
 			}
 		}
 	};
